@@ -7,6 +7,8 @@
 @layer base {
   :root {
     --radius: 0.5rem;
+    background-color: black;
+    scrollbar-width: none;
   }
 }
 
@@ -133,23 +135,23 @@
 
   /* startupcard */
   .startup-card {
-    @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
+    @apply bg-white opacity-90 border-[4px] border-gray-500 py-6 px-5 rounded-[22px] hover:border-emerald-500 hover:opacity-100 transition-all duration-500;
   }
 
-  .startup-card_date {
-    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full group-hover:bg-white-100;
+  .startup_card_date {
+    @apply font-medium text-[16px] bg-yellow-500 px-4 py-2 rounded-full;
   }
 
   .startup-card_desc {
-    @apply font-normal text-[16px] line-clamp-2 my-3 text-black-100 break-all;
+    @apply font-normal text-[17px] line-clamp-2 my-3 text-black-200 break-all;
   }
 
   .startup-card_img {
-    @apply w-full h-[164px] rounded-[10px] object-cover;
+    @apply w-full h-[174px] rounded-[15px] object-cover hover:scale-105 transition-all duration-500 ;
   }
 
   .startup-card_btn {
-    @apply rounded-full bg-black-200 font-medium text-[16px] text-white px-5 py-3 !important;
+    @apply rounded-full bg-gray-400 font-medium text-[17px] text-black hover:bg-black hover:text-white px-5 py-3 !important;
   }
 
   .startup-card_skeleton {
@@ -200,11 +202,11 @@
 
   .pattern {
     background-image: linear-gradient(
-            to right,
-            transparent 40.5%,
-            rgba(251, 232, 67, 0.2) 49.5%,
-            rgba(251, 232, 67, 0.6) 50.5%,
-            transparent 50.5%
+      to right,
+      transparent 40.5%,
+      rgba(251, 232, 67, 0.2) 49.5%,
+      rgba(251, 232, 67, 0.6) 50.5%,
+      transparent 50.5%
     );
     background-size: 5% 100%;
     background-position: center;
