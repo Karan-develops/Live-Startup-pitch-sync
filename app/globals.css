@@ -78,7 +78,7 @@
   }
 
   .no-result {
-    @apply text-black-100 text-sm font-normal;
+    @apply text-white text-xl font-normal;
   }
 
   /* profile */
