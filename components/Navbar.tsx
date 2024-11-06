@@ -12,8 +12,8 @@ import {
 const Navbar = async () => {
   const session = await auth();
   return (
-    <header className="px-5 py-3 bg-black shadow-200 font-work-sans">
-      <nav className="flex justify-between items-center">
+    <header className="px-5 py-3 bg-black shadow-200 font-work-sans border-b border-green-500">
+      <nav className="flex justify-between items-center ">
         <Link href={"/"}>
           <span className="flex text-3xl ml-8 text-white">
             <span className="text-emerald-500">Pitch</span>-Sync{" "}
