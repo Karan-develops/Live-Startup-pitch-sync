@@ -163,19 +163,19 @@
 
   /* startupform */
   .startup-form {
-    @apply max-w-2xl mx-auto bg-white my-10 space-y-8 px-6;
+    @apply max-w-3xl mx-auto my-10 space-y-8 px-6 ;
   }
 
   .startup-form_label {
-    @apply font-bold text-[18px] text-black uppercase;
+    @apply font-bold text-[18px] text-white font-serif;
   }
 
   .startup-form_input {
-    @apply border-[3px] border-black px-5 py-7 text-[18px] text-black font-semibold rounded-full mt-3 placeholder:text-black-300 !important;
+    @apply border-[3px] border-white px-5 py-7 text-[18px] text-white focus:shadow-md focus:shadow-white font-semibold rounded-full mt-3 placeholder:text-black-300 !important;
   }
 
   .startup-form_textarea {
-    @apply border-[3px] border-black p-5 text-[18px] text-black font-semibold rounded-[20px] mt-3 placeholder:text-black-300 !important;
+    @apply border-[3px] p-5 text-[18px] focus:shadow-md focus:shadow-white text-white font-semibold rounded-[20px] mt-3 placeholder:text-black-300 !important;
   }
 
   .startup-form_error {
@@ -187,7 +187,7 @@
   }
 
   .startup-form_btn {
-    @apply bg-primary border-[4px] border-black rounded-full p-5 min-h-[70px] w-full font-bold text-[18px] !important;
+    @apply bg-green-700 border-[5px] text-white border-white hover:bg-emerald-600 rounded-full p-5 min-h-[70px] w-full text-[20px] font-semibold !important;
   }
 
   /* view */
