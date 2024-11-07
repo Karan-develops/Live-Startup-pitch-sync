@@ -7,7 +7,7 @@
 @layer base {
   :root {
     --radius: 0.5rem;
-    /* background-color: black; */
+    background-color: rgb(11, 11, 11);
     scrollbar-width: none;
   }
 }
@@ -34,11 +34,11 @@
   }
 
   .text-24-black {
-    @apply text-[24px] font-black text-black;
+    @apply text-[20px] font-black text-black;
   }
 
   .text-20-medium {
-    @apply font-medium text-[20px] text-black;
+    @apply font-medium text-[20px] text-white;
   }
 
   .text-16-medium {
@@ -54,7 +54,7 @@
   }
 
   .tag {
-    @apply bg-secondary px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative tag-tri;
+    @apply bg-yellow-500 px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative tag-tri hover:shadow-md hover:shadow-yellow-600 hover:scale-105 transition-all duration-500 ;
   }
 
   .heading {
@@ -99,6 +99,9 @@
   }
 
   /* idea details */
+  .image_startup{
+    @apply w-full h-auto rounded-xl border-2 border-cyan-400 transition-all duration-500 hover:scale-95 shadow-lg shadow-teal-400
+  }
   .divider {
     @apply border-dotted bg-zinc-400 max-w-4xl my-10 mx-auto;
   }
@@ -193,11 +196,11 @@
   }
 
   .view-text {
-    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-lg capitalize;
+    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-lg capitalize transition-all duration-500 hover:scale-105;
   }
 
   .category-tag {
-    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full;
+    @apply font-medium text-[17px] px-4 py-2 rounded-full bg-white text-black hover:bg-black hover:text-white transition-all duration-300;
   }
 
   .pattern {
