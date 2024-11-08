@@ -49,12 +49,16 @@
     @apply font-normal text-sm text-white-100/80;
   }
 
+  .text_startup_name {
+    @apply bg-gradient-to-r from-green-400 to-blue-100 bg-clip-text text-transparent;
+  }
+
   .pink_container {
     @apply w-full bg-emerald-700 min-h-[530px] pattern flex justify-center items-center flex-col py-10 px-6;
   }
 
   .tag {
-    @apply bg-yellow-500 px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative tag-tri hover:shadow-md hover:shadow-yellow-600 hover:scale-105 transition-all duration-500 ;
+    @apply bg-yellow-500 px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative tag-tri hover:shadow-md hover:shadow-yellow-600 hover:scale-105 transition-all duration-500;
   }
 
   .heading {
@@ -99,8 +103,8 @@
   }
 
   /* idea details */
-  .image_startup{
-    @apply w-full h-auto rounded-xl border-2 border-cyan-400 transition-all duration-500 hover:scale-95 shadow-lg shadow-teal-400
+  .image_startup {
+    @apply w-full h-auto rounded-xl border-2 border-cyan-400 transition-all duration-500 hover:scale-95 shadow-lg shadow-teal-400;
   }
   .divider {
     @apply border-dotted bg-zinc-400 max-w-4xl my-10 mx-auto;
@@ -150,7 +154,7 @@
   }
 
   .startup-card_img {
-    @apply w-full h-[174px] rounded-[15px] object-cover hover:scale-105 transition-all duration-500 ;
+    @apply w-full h-[174px] rounded-[15px] object-cover hover:scale-105 transition-all duration-500;
   }
 
   .startup-card_btn {
@@ -163,7 +167,7 @@
 
   /* startupform */
   .startup-form {
-    @apply max-w-3xl mx-auto my-10 space-y-8 px-6 ;
+    @apply max-w-3xl mx-auto my-10 space-y-8 px-6;
   }
 
   .startup-form_label {

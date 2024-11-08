@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 import { Send } from "lucide-react";
 import { Button } from "./ui/button";
+import { createPitch } from "@/lib/actions";
 
 const StartupForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -27,18 +28,22 @@ const StartupForm = () => {
         pitch,
       };
       await formSchema.parseAsync(formValues);
-      console.log(formValues);
+      // console.log(formValues);
 
-      //   const result = await createIdea(prevState,formData,pitch)
-      //   console.log(result);
-      //   if(result.status == "SUCCESS"){
-      //     toast({
-      //         title: "SUCCESS",
-      //         description: "Startup pitch created Successfully!",
-      //       });
-      //       router.push(`/startup/${result.id}`)
-      //   }
-      //   return result
+      const result = await createPitch(prevState, formData, pitch);
+      // console.log(result);
+      if (result.status == "SUCCESS") {
+        toast({
+          title: "SUCCESS",
+          description: "Startup pitch created Successfully!",
+          style: {
+            backgroundColor: "green",
+            color: "white",
+          },
+        });
+        router.push(`/startup/${result._id}`);
+      }
+      return result;
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fErrors = error.flatten().fieldErrors;
@@ -47,6 +52,10 @@ const StartupForm = () => {
           title: "Error",
           description: "Please check your inputs",
           variant: "destructive",
+          style: {
+            backgroundColor: "red",
+            color: "white",
+          },
         });
         return { ...prevState, error: "Validation Failed", status: "ERROR" };
       }
@@ -54,6 +63,10 @@ const StartupForm = () => {
         title: "Error",
         description: "An Unexpected Error Occured",
         variant: "destructive",
+        style: {
+          backgroundColor: "red",
+          color: "white",
+        },
       });
       return {
         ...prevState,

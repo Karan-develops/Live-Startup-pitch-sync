@@ -8,8 +8,8 @@ import markdownit from "markdown-it";
 import {
   ArrowBigDown,
   CalendarArrowUp,
+  CircleUserRound,
   RefreshCwOff,
-  UserRound,
 } from "lucide-react";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -37,8 +37,8 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <section className="section_container">
         <img
           src={post.image}
-          alt="startup_thumbnail"
-          className="image_startup"
+          alt="-- Wrong URL ( We need absolute paths )"
+          className="image_startup text-white"
         />
         <div className="space-y-5 mt-10 max-w-5xl mx-auto">
           <div className="flex-between gap-5 bg-gray-500 p-2 rounded-lg border-2 border-teal-500 shadow-md shadow-teal-400">
@@ -55,10 +55,10 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
               />
               <div>
                 <p className="flex text-24-black">
-                  <UserRound className="size-5 mt-[5px]" />
-                  {post.author.name}
+                  <CircleUserRound className=" size-5 mr-1 mt-[5px] !text-black" />
+                  <span>{post.author.name}</span>
                 </p>
-                <p className="text-16-medium !text-black-200">
+                <p className="text_startup_name text-16-medium !text-black-200">
                   @{post.author.username}
                 </p>
               </div>
