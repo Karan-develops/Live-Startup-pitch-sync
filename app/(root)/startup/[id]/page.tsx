@@ -65,7 +65,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
             </Link>
             <p className="category-tag">{post.category}</p>
           </div>
-          <h3 className="flex text-30-bold !text-white">
+          <h3 className="flex text-30-bold">
             <ArrowBigDown className="text-white size-8 mt-2" />
             Pitch Details <ArrowBigDown className="text-white size-8 mt-2" />
           </h3>
