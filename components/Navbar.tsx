@@ -3,7 +3,6 @@ import React from "react";
 import { auth, signOut, signIn } from "@/auth";
 import {
   CirclePlus,
-  CircleUserRound,
   Github,
   LogOut,
   Waypoints,

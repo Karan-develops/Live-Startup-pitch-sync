@@ -6,7 +6,7 @@ import Image from "next/image";
 import UserStartups from "@/components/UserStartups";
 import { Suspense } from "react";
 import { StartupCardSkeleton } from "@/components/StartupCard";
-import { Activity, Dices } from "lucide-react";
+import { Activity } from "lucide-react";
 
 export const experimental_ppr = true;
 

@@ -168,6 +168,10 @@ const StartupForm = () => {
         {isPending ? "Submitting Plz Wait" : `Submit your Pitch`}
         <Send className="!size-5" />
       </Button>
+      <p className="text-20-medium text-center">
+        *Note: New Startups you create may take 60 seconds to reflect on main
+        page.
+      </p>
     </form>
   );
 };

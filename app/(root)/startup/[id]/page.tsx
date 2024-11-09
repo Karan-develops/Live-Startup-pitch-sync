@@ -12,6 +12,7 @@ import {
   ArrowBigDown,
   CalendarArrowUp,
   CircleUserRound,
+  MousePointerClick,
   RefreshCwOff,
 } from "lucide-react";
 import { Suspense } from "react";
@@ -28,7 +29,7 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const [post, { select: editorPosts }] = await Promise.all([
     client.fetch(STARTUP_BY_ID_QUERY, { id }),
     client.fetch(PLAYLIST_BY_SLUG_QUERY, {
-      slug: "editor-picks-new",
+      slug: "editor-picks",
     }),
   ]);
 
@@ -95,7 +96,10 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
         <hr className="divider" />
         {editorPosts?.length > 0 && (
           <div className="max-w-4xl mx-auto">
-            <p className="text-30-semibold">Editor Picks</p>
+            <p className="flex text-30-semibold">
+              <MousePointerClick className="mt-3 mr-2 size-6" />
+              Editor Picks
+            </p>
             <ul className="mt-7 card_grid-sm">
               {editorPosts.map((post: StartupTypeCard, i: number) => (
                 <StartupCard key={i} post={post} />

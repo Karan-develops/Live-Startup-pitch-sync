@@ -1,5 +1,11 @@
 import { cn, formatDate } from "@/lib/utils";
-import { CalendarArrowUp, Eye, ListCollapse } from "lucide-react";
+import {
+  BadgeCheck,
+  CalendarArrowUp,
+  Eye,
+  ListCollapse,
+  UserRound,
+} from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
@@ -32,10 +38,16 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
         </div>
       </div>
 
-      <div className="flex-between mt-5 gap-5">
+      <div className="flex-between mt-5 gap-5 bg-gray-300 p-2 rounded-xl">
         <div className="flex-1">
           <Link href={`/user/${author?._id}`}>
-            <p className="text-16-medium line-clamp-1">{author?.name}</p>
+            <p className="flex text-16-medium line-clamp-1">
+              <UserRound className="mr-1 size-5" />
+              {author?.name}
+              {author?.name === "Karan Aggarwal" && (
+                <BadgeCheck className="ml-1 text-green-600 size-5 mt-[3px]" />
+              )}
+            </p>
           </Link>
           <Link href={`/startup/${_id}`}>
             <h3 className="text-26-semibold line-clamp-1">{title}</h3>

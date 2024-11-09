@@ -26,7 +26,7 @@
   }
 
   .text-30-semibold {
-    @apply font-semibold text-[30px] text-black;
+    @apply font-semibold text-[30px] text-white;
   }
 
   .text-26-semibold {
@@ -123,10 +123,6 @@
     @apply p-0 focus-visible:ring-0 bg-none rounded-full drop-shadow-md !important;
   }
 
-  .dropdown-menu {
-    @apply w-56 border-[5px] border-black bg-white p-5 rounded-2xl !important;
-  }
-
   .login {
     @apply border-[5px] py-4 border-black bg-white text-black relative shadow-100 font-work-sans font-medium hover:shadow-none transition-all duration-500 !important;
   }
@@ -188,10 +184,6 @@
 
   .startup-form_error {
     @apply text-red-500 mt-2 ml-5;
-  }
-
-  .startup-form_editor {
-    @apply mt-3 border-[3px] border-black text-[18px] text-black font-semibold placeholder:text-black-300 !important;
   }
 
   .startup-form_btn {
