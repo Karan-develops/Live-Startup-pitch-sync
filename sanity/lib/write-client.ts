@@ -1,7 +1,9 @@
 import "server-only";
 import { createClient } from "next-sanity";
 
-import { apiVersion, dataset, projectId, token } from "../env";
+import { apiVersion, dataset, projectId } from "../env";
+
+const token = process.env.SANITY_WRITE_TOKEN;
 
 export const writeClient = createClient({
   projectId,
